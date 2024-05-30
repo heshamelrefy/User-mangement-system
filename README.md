@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## To run project install
 
   - npm install
-  - 
+
 ## To run database server 
 
 - npm run json-server
