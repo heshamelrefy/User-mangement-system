@@ -9,7 +9,6 @@ import { AppLangService } from 'src/app/shared/services/app-lang.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
   isAr = false
   appLanguage!: string
   isLogeedIn = false
@@ -17,8 +16,6 @@ export class NavbarComponent implements OnInit {
   {
     this._AuthServices.currentUser.subscribe(user =>{
       this.isLogeedIn = Object.keys(user).length === 0 ? false : true;
-      console.log(this.isLogeedIn);
-      
     })
   }
   ngOnInit() {

@@ -1,0 +1,48 @@
+
+
+<div class="modal fade" id="Add" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header d-flex justify-content-between">
+          <h5 class="modal-title" id="exampleModalLabel">{{isEdit ? ('form.editUser'|translate):('form.addUser' |translate)}} </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]='userForm' (ngSubmit)="saveChanges()">
+            <label for="name">{{'form.name'|translate}}</label>
+            <input [class.is-valid]="userF['name'].errors == null && userF['name'].touched" type="text" name="name" class="form-control shadow-none" formControlName='name' >
+            <div *ngIf="userF['name'].touched && userF['name'].invalid" class="text-danger p-1">
+                <small *ngIf="userF['name'].errors && userF['name'].errors['required']">{{'message.required'|translate}}</small>
+                
+            </div>
+            <label for="email">{{'form.email'|translate}}</label>
+            <input [class.is-valid]="userF['email'].errors == null && userF['email'].touched" type="email" name="email" class="form-control shadow-none" formControlName='email' >
+            <div *ngIf="userF['email'].touched && userF['email'].invalid" class="text-danger p-1">
+                <div *ngIf="userF['email'].errors && userF['email'].errors['required']">{{'message.required'|translate}}</div>
+                <div *ngIf="userF['email'].errors && userF['email'].errors['email']">{{'message.emailInvalid'|translate}}</div>
+            </div>
+
+
+            <label for="address">{{'form.address'|translate}}</label>
+            <input [class.is-valid]="userF['address'].errors == null && userF['address'].touched" type="text" name="address" class="form-control shadow-none" formControlName='address' >
+            <div *ngIf="userF['address'].touched && userF['address'].invalid" class="text-danger p-1">
+                <div *ngIf="userF['address'].errors && userF['address'].errors['required']">{{'message.required'|translate}}</div>
+            </div>
+
+
+            <label for="phone">{{'form.phone'|translate}}</label>
+            <input [class.is-valid]="userF['phone'].errors == null && userF['phone'].touched" type="text" name="phone" class="form-control shadow-none" formControlName='phone' >
+            <div *ngIf="userF['phone'].touched && userF['phone'].invalid" class="text-danger p-1">
+                <div *ngIf="userF['phone'].errors && userF['phone'].errors['required']">{{'message.required'|translate}}</div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white shadow-none" data-bs-dismiss="modal">{{'buttons.Cancel'|translate}}</button>
+                <button [disabled]="userForm.invalid"   type="submit" class="btn btn-success shadow-none" data-bs-dismiss="modal">{{!isEdit ?('buttons.add' | translate):('buttons.edit' | translate)}}</button>
+              </div>
+         </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>

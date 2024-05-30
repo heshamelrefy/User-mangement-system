@@ -2,5 +2,35 @@
     "navbar":{
         "home":"Home",
         "logout":"Logout"
+    },
+    "message":{
+        "required":"required",
+        "forgetPassword":"Forgot Password?",
+        "emailInvalid":"E-mail is invalid",
+        "deleteTitle":"Delete User",
+        "deleteMsg":"Are you sure delete this user ?"
+    },
+    "form":{
+        "name":"Name",
+        "phone":"Phone",
+        "address":"Address",
+        "email":"Email",
+        "website":"Website",
+        "overview":"OVERVIEW",
+        "editUser":"Edit User",
+        "addUser":"Add User",
+        "editProfile":"Edit Profile"
+    },
+    "buttons":{
+        "addnew":"Add New User",
+        "view":"View As",
+        "SaveChanges":"Save Changes",
+        "Cancel":"Cancel",
+        "logIn":"Log In",
+        "add":"Add",
+        "edit":"Edit",
+        "login":"Login",
+        "delete":"Delete"
     }
+
 }

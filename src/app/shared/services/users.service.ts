@@ -15,12 +15,16 @@ export class UsersService {
   {
     return this.http.get<IUser[]>(`${this.baseUrl}users`);
   }
-  editUsers():Observable<IUser[]> 
+  addUser(newUserData:IUser):Observable<IUser> 
   {
-    return this.http.get<IUser[]>(`${this.baseUrl}users`);
+    return this.http.post<IUser>(`${this.baseUrl}users`,newUserData);
   }
-  deleteUsers():Observable<IUser[]> 
+  editUser(newUserData:IUser):Observable<IUser> 
   {
-    return this.http.get<IUser[]>(`${this.baseUrl}users`);
+    return this.http.patch<IUser>(`${this.baseUrl}users/${newUserData.id}`,newUserData);
+  }
+  deleteUser(newUserData:IUser):Observable<IUser> 
+  {
+    return this.http.delete<IUser>(`${this.baseUrl}users/${+newUserData.id}`);
   }
 }

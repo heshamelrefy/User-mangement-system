@@ -1,3 +1,42 @@
-<ng-container *ngFor="let card of [1,2,3]">
-    <app-card></app-card>
+
+<div class=" d-flex justify-content-between p-4 ">
+    <button [routerLink]="['/user-view']" routerLinkActive="router-link-active"  class="btn btn-dark d-flex align-items-center gap-2">
+        <b>{{'buttons.view'|translate}}</b>
+        <i class="fa fa-eye text-white fs-6"></i>
+      </button>
+    <div class="btns">
+        <button data-bs-toggle="modal" data-bs-target="#Add"  (click)="isEdit = false; userInfo = {}"  class="btn btn-success"><i class="fas fa-plus-circle"></i> {{'buttons.addnew'|translate}}</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<app-form-popup [isEdit]="isEdit" (userInfoAddEdit)="saveUserData($event)" [userInfo]="(userInfo |keyvalue).length ? userInfo : {}" ></app-form-popup>
+
+<ng-container *ngIf="usersList.length">
+    <div class="container mb-4">
+        <div class="row">
+            <div *ngFor="let user of usersList" class="col-md-4">
+                <app-card [user]="user" (userInfo)="getCurrentUserInfo($event)"></app-card>
+            </div>
+        </div>
+    </div>
 </ng-container>
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{'message.deleteTitle'|translate}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>{{'message.deleteMsg'|translate}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{'buttons.Cancel'|translate}}</button>
+          <button type="button" class="btn btn-danger" (click)="deleteUser()" data-bs-dismiss="modal">{{'buttons.delete'|translate}}</button>
+        </div>
+      </div>
+    </div>
+  </div>

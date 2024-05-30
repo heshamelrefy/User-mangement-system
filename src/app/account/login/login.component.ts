@@ -26,8 +26,6 @@ export class LoginComponent implements OnInit {
       }
 
     }
-    console.log(_AuthServices.getCurrentUser());
-    
    }
   ngOnInit(): void {
     this.initForm()
@@ -46,8 +44,6 @@ export class LoginComponent implements OnInit {
       return;
     }
     this._AuthServices.login(this.loginForm.value)
-    
-
   }
   
 }

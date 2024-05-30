@@ -2,5 +2,36 @@
     "navbar":{
         "home":"الصفحة الرئيسية",
         "logout":"تسجيل الخروج"
+    },
+    "message":{
+        "required":"هذا الحقل مطلوب",
+        "forgetPassword":"هل نسيت كلمة المرور ؟",
+        "emailInvalid":"البريد الالكترونى غير صحيح",
+        "deleteTitle":"حذف المستخدم",
+        "deleteMsg":"هل تريد بالفعل حذف هذا المستخدم ؟"
+    },
+    "form":{
+        "name":"الإسم",
+        "phone":"رقم الهاتف",
+        "address":"العنوان",
+        "email":"البريد الإلكترونى",
+        "website":"الموقع إلكتروني",
+        "overview":"ملخص",
+        "editUser":"تعديل المستخدم",
+        "addUser":"Add User",
+        "editProfile":"تعديل البروفايل"
+    },
+    "buttons":{
+        "addnew":"إضافة مستخدم جديد",
+        "view":"البروفايل",
+        "SaveChanges":"حفظ التغييرات",
+        "Cancel":"إالغاء",
+        "logIn":"تسجيل الدخول",
+        "add":"إضافة",
+        "ُedit":"تعديل",
+        "login":"Login",
+        "delete":"حذف"
+
     }
+
 }

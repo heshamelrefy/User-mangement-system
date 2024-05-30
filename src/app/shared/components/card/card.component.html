@@ -1,8 +1,19 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="card mt-4 w-100" *ngIf="user" style="width: 18rem;">
+    <div class="card-body text-start">
+      <div class="text-end">
+        <button class="btn " (click)="getCurrentUserInfo()" data-bs-toggle="modal" data-bs-target="#Add">
+          <i class="fa  fa-pencil-square fs-5 text-warning"></i>
+        </button>
+        <button data-bs-toggle="modal" data-bs-target="#deleteModal" (click)="deleteUser()"  class="btn ">
+          <i class="fa fa-trash text-danger fs-5"></i>
+        </button>
+        
+      </div>
+      <h5 class="card-title">{{user.name}}</h5>
+      <p class="card-title">{{user.phone}}</p>
+      <p class="card-text">{{user.email}}</p>
+      <p class="card-text">{{user.address}}</p>
     </div>
   </div>
+
+
