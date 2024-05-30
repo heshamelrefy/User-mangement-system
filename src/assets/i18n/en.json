@@ -31,6 +31,11 @@
         "edit":"Edit",
         "login":"Login",
         "delete":"Delete"
+    },
+    "placeholder":
+    {
+        "email":"Enter Email",
+        "password":"Enter Password"
     }
 
 }

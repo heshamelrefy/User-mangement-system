@@ -32,6 +32,11 @@
         "login":"Login",
         "delete":"حذف"
 
+    },
+    "placeholder":
+    {
+        "email":"ادخل الإيميل",
+        "password":"ادخل الباسورد"
     }
 
 }
