@@ -9,6 +9,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - npm run json-server
 
+## To login user 
+
+- admin Admin@gmail.com
+- user user@gmail.com
+
 ## To show data from server
 
 - http://localhost:3000/users
