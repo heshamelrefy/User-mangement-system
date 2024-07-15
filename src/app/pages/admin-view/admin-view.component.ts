@@ -13,10 +13,12 @@ import { UsersService } from 'src/app/shared/services/users.service';
 export class AdminViewComponent implements OnInit {
   isEdit:boolean = true;
   usersList:Array<IUser> = []
+  postsList:Array<any> = []
   userInfo:any = {}
   constructor(private fb:FormBuilder,private _userServices:UsersService,public _AuthServices:AuthService){}
   ngOnInit(): void {
     this.getUsers()
+    this.getPosts()
   }
   // display users list
   getUsers()
@@ -25,6 +27,12 @@ export class AdminViewComponent implements OnInit {
       this.usersList = users.filter((user)=>{
         return (this._AuthServices.getCurrentUser() as IUser).id !== user.id;
       });
+    })
+  }
+  getPosts()
+  {
+    this._userServices.getPosts().subscribe((posts)=>{
+      this.postsList = posts
     })
   }
   // get current user
