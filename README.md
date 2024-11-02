@@ -1,6 +1,23 @@
-# WidebotTask
+# User management System
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+## To run project install
+
+  - npm install
+
+## To run database server 
+
+- npm run json-server
+
+## To login user 
+
+- admin Admin@gmail.com
+- user user@gmail.com
+
+## To show data from server
+
+- http://localhost:3000/users
+
 
 ## Development server
 

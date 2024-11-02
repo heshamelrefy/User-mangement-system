@@ -4,11 +4,13 @@ import { CardComponent } from './components/card/card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormPopupComponent } from './components/card/form-popup/form-popup.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { PostCardComponent } from './components/card/post-card/post-card.component';
 
 @NgModule({
   declarations: [
     CardComponent,
-    FormPopupComponent
+    FormPopupComponent,
+    PostCardComponent
   ],
   imports: [
     CommonModule,
@@ -16,6 +18,6 @@ import { TranslateModule } from '@ngx-translate/core';
     ReactiveFormsModule,
     TranslateModule
   ],
-  exports:[CardComponent,FormsModule,ReactiveFormsModule,FormPopupComponent,TranslateModule]
+  exports:[CardComponent,FormsModule,ReactiveFormsModule,FormPopupComponent,TranslateModule,PostCardComponent]
 })
 export class SharedModule { }

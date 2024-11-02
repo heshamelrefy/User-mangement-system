@@ -27,4 +27,8 @@ export class UsersService {
   {
     return this.http.delete<IUser>(`${this.baseUrl}users/${+newUserData.id}`);
   }
+  getPosts():Observable<any> 
+  {
+    return this.http.get<any>(`https://jsonplaceholder.typicode.com/posts`);
+  }
 }
